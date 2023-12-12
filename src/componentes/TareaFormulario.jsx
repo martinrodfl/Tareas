@@ -1,11 +1,8 @@
-import { useState } from 'react';
 import '../css/TareaFormulario.css';
 
 function TareaFormulario(props) {
-	const [input, setInput] = useState('');
-
 	const manejarCambio = (e) => {
-		setInput(e.target.value);
+		props.setInput(e.target.value);
 	};
 
 	const manejarEnvio = (e) => {
@@ -13,7 +10,7 @@ function TareaFormulario(props) {
 
 		const tareaNueva = {
 			id: crypto.randomUUID(),
-			texto: input,
+			texto: props.input,
 			completada: false,
 		};
 
