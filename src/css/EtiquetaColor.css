@@ -1,16 +1,20 @@
 .titulo-etiquetas {
-    color: black;
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    font-weight: bolder;
+	color: black;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	font-weight: bolder;
+	font-family: Roboto, sans-serif;
+}
 
-    .incompletas {
-        color: rgb(28, 28, 153);
+.totales {
+	color: whitesmoke;
+}
 
-    }
+.incompletas {
+	color: rgb(65, 65, 189);
+}
 
-    .completadas {
-        color: rgb(49, 153, 28);
-    }
+.completadas {
+	color: rgb(107, 107, 107);
 }

@@ -1,0 +1,68 @@
+.modal-capa {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.modal-contenido {
+	margin-bottom: 35%;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	width: 90%;
+	max-width: 800px;
+	max-height: 80%;
+	overflow-y: auto;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	color: #464646;
+}
+
+.modal-body {
+	padding-bottom: 10px;
+	color: #464646;
+}
+
+.modal-footer {
+	display: flex;
+	justify-content: flex-end;
+	color: #464646;
+}
+
+.boton-eliminar,
+.boton-cancelar,
+.boton-cerrar {
+	padding: 5px 10px;
+	border: none;
+	cursor: pointer;
+	background-color: #464646;
+	border-radius: 3px;
+	margin-left: 5px;
+}
+
+.boton-cerrar:hover {
+	background-color: #ddd;
+	color: #464646;
+}
+
+.boton-cancelar:hover {
+	background-color: #ddd;
+	color: #464646;
+}
+
+.boton-eliminar:hover {
+	background-color: rgb(213, 60, 60);
+	color: #e5e5e5;
+}

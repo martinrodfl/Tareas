@@ -1,51 +1,83 @@
 .tarea-formulario {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 25px;
+	padding: 5px;
 }
 
 .tarea-input {
-    width: 350px;
-    font-size: 18px;
-    color: #242424;
-    background-color: white;
-    padding: 14px 32px 14px 16px;
-    border: 2px solid #b5b5b5;
-    outline: none;
-    border-radius: 4px 0 0 4px;
-    -webkit-border-radius: 4px 0 0 4px;
-    -moz-border-radius: 4px 0 0 4px;
-    -ms-border-radius: 4px 0 0 4px;
-    -o-border-radius: 4px 0 0 4px;
+	width: 100%;
+	max-width: 500px;
+	font-size: 18px;
+	color: #242424;
+	background-color: white;
+	padding: 14px 32px 14px 16px;
+	border: 1px solid #3b3b3b;
+	outline: none;
+	border-radius: 4px 0 0 4px;
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	-ms-border-radius: 4px 0 0 4px;
+	-o-border-radius: 4px 0 0 4px;
 }
 
 .tarea-input:focus {
-    border: 2px solid #242424;
-    box-shadow: 1px 1px 1px #242424;
+	box-shadow: inset 0 0 0 0.5px #242424, 0 0 0 2px #242424;
 }
 
 .tarea-boton {
-    padding: 16px;
-    font-size: 18px;
-    font-family: Roboto, sans-serif;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    background: #242424;
-    /* box-shadow: 1px 1px 1px #242424; */
-    color: #fff;
-    text-transform: capitalize;
-    border-radius: 0 4px 4px 0;
-    -webkit-border-radius: 0 4px 4px 0;
-    -moz-border-radius: 0 4px 4px 0;
-    -ms-border-radius: 0 4px 4px 0;
-    -o-border-radius: 0 4px 4px 0;
+	padding: 16px;
+	font-size: 18px;
+	font-family: Roboto, sans-serif;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	background: #323131;
+	color: #fff;
+	text-transform: capitalize;
+	border-radius: 0 4px 4px 0;
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	-ms-border-radius: 0 4px 4px 0;
+	-o-border-radius: 0 4px 4px 0;
 }
 
-.tarea-boton:hover {
-    background: #ffffff;
-    color: #242424;
-    box-shadow: 1px 1px 1px #242424;
+@media (max-width: 680px) {
+	.tarea-input {
+		width: 90%;
+		max-width: 585px;
+		font-size: 15px;
+		padding: 10px 10px;
+	}
+
+	.tarea-boton {
+		min-width: 90%;
+		/* max-width: 500px; */
+		margin-top: 5px;
+		padding: 10px;
+		font-size: 15px;
+		box-shadow: 0px 0.5px 5px 0.5px rgba(245, 245, 245, 0.177);
+		border: 0.5px solid rgba(245, 245, 245, 0.088);
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+	}
+}
+
+@media (max-width: 460px) {
+	.tarea-formulario {
+		margin-bottom: 15px;
+		width: 100%;
+	}
+
+	.tarea-input {
+		min-width: 90%;
+		font-size: 15px;
+		padding: 15px 10px;
+	}
 }

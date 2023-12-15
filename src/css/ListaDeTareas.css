@@ -1,6 +1,11 @@
 .tareas-lista-contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 15px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	margin-top: 15px;
+	padding: 10px 0;
+	overflow-y: scroll;
 }

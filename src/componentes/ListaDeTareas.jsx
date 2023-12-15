@@ -6,7 +6,7 @@ const ListaDeTareas = ({ tareas, eliminarTarea, completarTarea }) => {
 	return (
 		<>
 			<div className='tareas-lista-contenedor'>
-				{tareas.map((tarea) => (
+				{tareas?.map((tarea) => (
 					<Tarea
 						key={tarea.id}
 						id={tarea.id}
