@@ -13,7 +13,7 @@
 
 .modal-contenido {
 	margin-bottom: 35%;
-	background-color: #fff;
+	background-color: #8f8f8ff1;
 	padding: 20px;
 	border-radius: 5px;
 	width: 90%;
@@ -27,7 +27,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 10px;
-	color: #464646;
+	color: #313131;
 }
 
 .modal-body {

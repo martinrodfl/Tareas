@@ -1,8 +1,8 @@
 import '../css/TareaFormulario.css';
 
-function TareaFormulario(props) {
+function TareaFormulario({ input, setInput, onSubmit }) {
 	const manejarCambio = (e) => {
-		props.setInput(e.target.value);
+		setInput(e.target.value);
 	};
 
 	const manejarEnvio = (e) => {
@@ -10,11 +10,11 @@ function TareaFormulario(props) {
 
 		const tareaNueva = {
 			id: crypto.randomUUID(),
-			texto: props.input,
+			texto: input,
 			completada: false,
 		};
 
-		props.onSubmit(tareaNueva);
+		onSubmit(tareaNueva);
 	};
 
 	return (

@@ -6,9 +6,9 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
-	margin-top: 10px;
+html {
+	display: flex;
+	flex-direction: column;
 }
 
 h1 {
@@ -16,17 +16,17 @@ h1 {
 	font-size: 25px;
 	font-family: Roboto, sans-serif;
 	text-align: center;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 
 .aplicacion-tareas {
 	margin: 0 auto;
+	padding-top: 10px;
 	width: 100%;
-	/* min-height: 100dvh; */
 	min-width: 320px;
 	max-width: 700px;
+	height: 100vh;
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -35,28 +35,9 @@ h1 {
 /* Lista de tareas */
 .tareas-lista-principal {
 	width: 100%;
-	min-height: 500px;
+	height: 90dvh;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border-radius: 25px;
-	-webkit-border-radius: 25px;
-	-moz-border-radius: 25px;
-	-ms-border-radius: 25px;
-	-o-border-radius: 25px;
 }
-
-/* @media (min-width: 414px) {
-	.aplicacion-tareas {
-		width: 100%;
-		height: 100dvh;
-		border: 1px solid red;
-		background-color: aqua;
-	}
-
-	.tareas-lista-principal {
-		min-width: 90%;
-		border: 1px solid red;
-	}
-} */

@@ -5,6 +5,7 @@
 	justify-content: space-evenly;
 	font-weight: bolder;
 	font-family: Roboto, sans-serif;
+	font-size: 13px;
 }
 
 .totales {
@@ -17,4 +18,10 @@
 
 .completadas {
 	color: rgb(107, 107, 107);
+}
+
+@media (min-width: 680px) {
+	.titulo-etiquetas {
+		font-size: 15px;
+	}
 }

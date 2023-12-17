@@ -7,8 +7,8 @@ const guardarLocalStorage = (tareasActualizadas) => {
 };
 
 const obtenerLocalStorage = () => {
-	const tareas = JSON.parse(localStorage.getItem('TAREAS'));
-	return tareas || [];
+	const tareas = localStorage?.getItem('TAREAS') || [''];
+	return tareas;
 };
 
 export { guardarLocalStorage, obtenerLocalStorage };

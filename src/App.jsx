@@ -41,6 +41,7 @@ function App() {
 	useEffect(() => {
 		setCompletada(cantidadTareasCompletadas);
 	}, [tareas, cantidadTareasCompletadas]);
+	// console.log('🚀 ~ file: App.jsx:44 ~ App ~ tareas:', tareas);
 
 	const agregarTarea = (tarea) => {
 		if (tarea.texto.trim()) {
@@ -89,6 +90,18 @@ function App() {
 		setEliminarTareaId(id);
 	};
 
+	const editarTarea = (tarea) => {
+		// const tareasEditadas = tareas.map((tarea) => {
+		// 	if (tarea.id === id) {
+		// 		tarea.texto = e.target.value;
+		// 	}
+		// 	return tarea;
+		// });
+		// setTareas(tareasEditadas);
+		// guardarLocalStorage(tareasEditadas);
+		console.log('editando.....', tarea.id);
+	};
+
 	return (
 		<div className='aplicacion-tareas'>
 			{mostrarConfirmacion && (
@@ -132,6 +145,7 @@ function App() {
 					eliminarTarea={eliminarTarea}
 					completarTarea={completarTarea}
 					setTareas={setTareas}
+					editarTarea={editarTarea}
 				/>
 			</div>
 		</div>
