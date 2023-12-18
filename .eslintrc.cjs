@@ -17,5 +17,6 @@ module.exports = {
 			{ allowConstantExport: true },
 		],
 		'react/prop-types': 'off',
+		'@typescript-eslint/no-unsafe-member-access': 'off',
 	},
 };

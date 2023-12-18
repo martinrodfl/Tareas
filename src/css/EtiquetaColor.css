@@ -1,0 +1,27 @@
+.titulo-etiquetas {
+	color: black;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	font-weight: bolder;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.totales {
+	color: whitesmoke;
+}
+
+.incompletas {
+	color: rgb(65, 65, 189);
+}
+
+.completadas {
+	color: rgb(107, 107, 107);
+}
+
+@media (min-width: 680px) {
+	.titulo-etiquetas {
+		font-size: 15px;
+	}
+}

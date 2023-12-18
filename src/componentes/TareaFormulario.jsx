@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import '../css/TareaFormulario.css';
 
-function TareaFormulario(props) {
-	const [input, setInput] = useState('');
-
+function TareaFormulario({ input, setInput, onSubmit }) {
 	const manejarCambio = (e) => {
 		setInput(e.target.value);
 	};
@@ -17,7 +14,7 @@ function TareaFormulario(props) {
 			completada: false,
 		};
 
-		props.onSubmit(tareaNueva);
+		onSubmit(tareaNueva);
 	};
 
 	return (
