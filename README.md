@@ -10,7 +10,7 @@ Permite agregar tareas, editarlas, eliminarlas, marcarlas como completadas y tam
 Para tener persistencia las tareas se guardan en localStorage.
 Responsiva para casi todos los tamaños de pantallas de telefonos moviles.
 
-- [Deploy](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) Click.
+- [Ir a Deploy](https://tareas-simples.vercel.app/).
 
 ## v2
 
