@@ -46,12 +46,15 @@
 	color: rgb(2, 82, 180);
 }
 
-/* textarea:active,
+textarea:active,
 textarea:focus-visible {
-	background-color: rgb(35, 35, 85);
-	border: none;
-	outline: none;
-} */
+	background-color: #2e2e6c;
+	border: #4c4c76;
+	outline: #4c4c76;
+	font-size: 15px;
+	transform-origin: top left;
+	transform: scale(0.75);
+}
 
 .tarea-texto {
 	width: 90%;
