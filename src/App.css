@@ -39,12 +39,12 @@ h1 {
 	align-items: center;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+/* @media screen and (-webkit-min-device-pixel-ratio:0) {
 
 	textarea,
 	input {
-		font-size: 16px;
-		/* transform-origin: top left; */
-		/* transform: scale(0.75); */
+		font-size: 1px;
+		transform-origin: top left;
+		transform: scale(0.75);
 	}
-}
+} */

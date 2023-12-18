@@ -48,9 +48,9 @@
 
 textarea:active,
 textarea:focus-visible {
-	background-color: #2e2e6c;
+	/* background-color: #2e2e6c;
 	border: #4c4c76;
-	outline: #4c4c76;
+	outline: #4c4c76; */
 	font-size: 15px;
 	transform-origin: top left;
 	transform: scale(0.75);
