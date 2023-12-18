@@ -1,7 +1,10 @@
-import Tarea from './Tarea';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
+import Tarea from './Tarea';
+
+import { guardarLocalStorage } from '../funciones/guardarEnLocalStorage';
+
 import '../css/ListaDeTareas.css';
-// import { guardarLocalStorage } from '../funciones/guardarEnLocalStorage';
 
 const ListaDeTareas = ({
 	tareas,
@@ -12,8 +15,12 @@ const ListaDeTareas = ({
 }) => {
 	const reordenarTareas = (list, startIndex, endIndex) => {
 		const result = [...list];
+
 		const [removed] = result.splice(startIndex, 1);
+
 		result.splice(endIndex, 0, removed);
+
+		guardarLocalStorage('TAREAS', result);
 
 		return result;
 	};
@@ -35,9 +42,7 @@ const ListaDeTareas = ({
 					setTareas((prevTasks) =>
 						reordenarTareas(prevTasks, source.index, destination.index)
 					);
-					// guardarLocalStorage((prevTasks) =>
-					// 	reordenarTareas(prevTasks, source.index, destination.index)
-					// );
+					console.log('TAREAS ONDRAGEND: ', tareas);
 				}}
 			>
 				<Droppable droppableId='tareass'>
@@ -55,6 +60,7 @@ const ListaDeTareas = ({
 								>
 									{(draggableProvided) => (
 										<div
+											className='tarea-lista-requerido-rbdng'
 											{...draggableProvided.draggableProps}
 											ref={draggableProvided.innerRef}
 											{...draggableProvided.dragHandleProps}

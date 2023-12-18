@@ -1,13 +1,18 @@
 import { useState } from 'react';
-import useScreenSize from '../hooks/useScreenSize';
-import { RiDeleteBin6Line } from 'react-icons/ri';
-import { RiEdit2Line } from 'react-icons/ri';
-import { RiSave3Line } from 'react-icons/ri';
-import { MdOutlineDoneOutline } from 'react-icons/md';
-import { guardarLocalStorage } from '../funciones/guardarEnLocalStorage';
-import '../css/Tarea.css';
 
-// import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import useScreenSize from '../hooks/useScreenSize.jsx';
+
+import { RiDeleteBin6Line } from 'react-icons/ri';
+
+import { RiEdit2Line } from 'react-icons/ri';
+
+import { RiSave3Line } from 'react-icons/ri';
+
+import { MdOutlineDoneOutline } from 'react-icons/md';
+
+import { guardarLocalStorage } from '../funciones/guardarEnLocalStorage';
+
+import '../css/Tarea.css';
 
 function Tarea({
 	id,
@@ -21,7 +26,7 @@ function Tarea({
 	const [text, setText] = useState(texto);
 	const [isEditing, setIsEditing] = useState(false);
 
-	const { ancho } = useScreenSize();
+	const { width } = useScreenSize();
 
 	const handleTextChange = (event) => {
 		setText(event.target.value);
@@ -40,7 +45,7 @@ function Tarea({
 			return tarea;
 		});
 		setTareas(tareasEditadas);
-		guardarLocalStorage(tareasEditadas);
+		guardarLocalStorage('TAREAS', tareasEditadas);
 	};
 	return (
 		<div
@@ -66,7 +71,23 @@ function Tarea({
 						value={text}
 						onChange={handleTextChange}
 						rows={3}
-						cols={ancho < 321 ? 22 : ancho < 376 ? 27 : ancho < 500 ? 29 : 50}
+						cols={
+							width < 321
+								? 22
+								: width < 361
+								? 27
+								: width < 376
+								? 28
+								: width < 385
+								? 29
+								: width < 391
+								? 30
+								: width < 415
+								? 33
+								: width < 500
+								? 35
+								: 48
+						}
 					/>
 				) : (
 					<p>{text}</p>

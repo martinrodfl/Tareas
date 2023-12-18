@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import '../css/Modal.css';
 
 const Modal = ({ children, titulo, onConfirm, onCancel, isOpen, tareaId }) => {

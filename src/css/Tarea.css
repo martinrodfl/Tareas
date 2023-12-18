@@ -1,13 +1,11 @@
 .tarea-contenedor {
-	width: 90%;
+	width: 95%;
 	max-width: 500px;
-	/* min-height: 50px; */
 	background-color: rgb(35, 35, 85);
 	margin: 5px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	cursor: pointer;
 	border-radius: 8px;
 	box-shadow: 3px 3px 1px #242424;
 	font-weight: 900;
@@ -17,31 +15,40 @@
 }
 
 .completar-tarea-onclick {
-	width: 30px;
-	height: 100%;
-	background-color: rgb(47, 182, 255);
-	color: #3f3f3f;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 35px;
+	height: 78px;
+	background-color: rgb(47, 182, 255);
+	color: #3f3f3f;
 	border-radius: 5px 0px 0px 5px;
+	cursor: pointer;
+}
+
+.completar-tarea-onclick:hover {
+	color: rgb(128, 128, 128);
 }
 
 .completar-tarea-onclick-completada {
-	width: 30px;
-	height: 100%;
+	width: 35px;
+	height: 78px;
 	background-color: rgb(129, 129, 129);
 	color: #3f3f3f;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px 0px 0px 5px;
-	/* min-width: 20px; */
+	cursor: pointer;
+}
+
+.completar-tarea-onclick-completada:hover {
+	color: rgb(2, 82, 180);
 }
 
 .tarea-texto {
 	width: 90%;
-	height: 100%;
+	height: 78px;
 	font-size: 20px;
 	display: flex;
 	align-items: center;
@@ -51,14 +58,18 @@
 	display: flex;
 	flex-shrink: 1;
 	background-color: transparent;
-	/* border: none; */
-	/* border: 1px solid red; */
+
 }
 
 .tarea-icono {
 	width: 25px;
 	height: 25px;
 	margin: 5px;
+	cursor: pointer;
+}
+
+.tarea-icono:hover {
+	color: rgb(128, 128, 128);
 }
 
 .tarea-contenedor:nth-child(3n + 1) {
@@ -72,11 +83,13 @@
 .tarea-contenedor.completada {
 	background-color: #3f3f3f;
 	text-decoration: line-through;
+	font-style: italic;
 	font-weight: 300;
 	color: #6b6b6b;
-	width: 86%;
+	width: 90%;
 	max-width: 480px;
 	min-height: 60px;
+
 
 	.tarea-icono {
 		color: #5c5c5c;
@@ -99,7 +112,7 @@
 	}
 
 	.tarea-contenedor.completada {
-		width: 86%;
+		width: 90%;
 	}
 }
 
