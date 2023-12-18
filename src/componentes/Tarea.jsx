@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 import useScreenSize from '../hooks/useScreenSize.jsx';
 
-import { RiDeleteBin6Line } from 'react-icons/ri';
+import { TfiTrash } from 'react-icons/tfi';
 
-import { RiEdit2Line } from 'react-icons/ri';
+import { TfiPencil } from 'react-icons/tfi';
 
-import { RiSave3Line } from 'react-icons/ri';
+import { TfiSave } from 'react-icons/tfi';
 
 import { MdOutlineDoneOutline } from 'react-icons/md';
 
@@ -101,26 +101,23 @@ function Tarea({
 				)}
 			</div>
 
-			<div>
-				<div className='tarea-contenedor-iconos'>
-					{isEditing ? (
-						<RiSave3Line
-							className='tarea-icono'
-							onClick={handleSaveClick}
-						/>
-					) : (
-						<RiEdit2Line
-							className='tarea-icono'
-							onClick={handleEditClick}
-						/>
-					)}
-				</div>
-				<div
-					className='tarea-contenedor-iconos'
+			<div className='tarea-contenedor-iconos'>
+				{isEditing ? (
+					<TfiSave
+						className='tarea-icono-chico'
+						onClick={handleSaveClick}
+					/>
+				) : (
+					<TfiPencil
+						className='tarea-icono-chico'
+						onClick={handleEditClick}
+					/>
+				)}
+
+				<TfiTrash
+					className='tarea-icono-grande'
 					onClick={() => eliminarTarea(id)}
-				>
-					<RiDeleteBin6Line className='tarea-icono' />
-				</div>
+				/>
 			</div>
 		</div>
 	);

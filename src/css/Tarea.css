@@ -1,18 +1,24 @@
 .tarea-contenedor {
 	width: 95%;
 	max-width: 500px;
-	background-color: rgb(35, 35, 85);
+	background-color: rgb(46, 46, 46);
 	margin: 5px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 8px;
-	box-shadow: 3px 3px 1px #242424;
 	font-weight: 400;
 	letter-spacing: .5px;
 	text-transform: capitalize;
 	user-select: none;
 	transition: all 0.3s linear;
+	border: 1px solid rgb(84, 84, 84);
+}
+
+.tarea-contenedor:hover {
+	background-color: rgb(37, 37, 37);
+	border: 1px solid rgb(106, 106, 106);
+	font-weight: 600;
 }
 
 .completar-tarea-onclick {
@@ -21,20 +27,20 @@
 	align-items: center;
 	width: 35px;
 	height: 78px;
-	background-color: rgb(47, 182, 255);
-	color: #3f3f3f;
+	border-right: 1px solid rgba(83, 83, 83, 0.525);
+	color: #02f99689;
 	border-radius: 5px 0px 0px 5px;
 	cursor: pointer;
 }
 
 .completar-tarea-onclick:hover {
-	color: rgb(128, 128, 128);
+	color: #30f9a9ea;
 }
 
 .completar-tarea-onclick-completada {
 	min-width: 35px;
 	height: 78px;
-	background-color: rgb(129, 129, 129);
+	border-right: 1px dashed rgba(83, 83, 83, 0.525);
 	color: #3f3f3f;
 	display: flex;
 	justify-content: center;
@@ -44,7 +50,7 @@
 }
 
 .completar-tarea-onclick-completada:hover {
-	color: rgb(2, 82, 180);
+	color: #02f99689;
 }
 
 textarea:active,
@@ -68,31 +74,49 @@ textarea:focus-visible {
 
 }
 
-.tarea-icono {
-	width: 25px;
-	height: 25px;
-	margin: 5px;
+.tarea-contenedor-iconos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 35px;
+	height: 78px;
+}
+
+.tarea-icono-chico {
+	font-size: 23px;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tarea-icono-chico:hover {
+	color: rgb(93, 205, 203);
+}
+
+.tarea-icono-grande {
+	font-size: 28px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tarea-icono-grande:hover {
+	color: rgb(205, 93, 93);
 }
 
 .tarea-icono:hover {
 	color: rgb(128, 128, 128);
 }
 
-.tarea-contenedor:nth-child(3n + 1) {
-	background-color: rgb(46, 46, 108);
-}
-
-.tarea-contenedor:nth-child(3n + 2) {
-	background-color: rgb(61, 61, 142);
-}
-
 .tarea-contenedor.completada {
-	background-color: #3f3f3f;
+	background-color: rgb(27, 27, 27);
 	text-decoration: line-through;
 	font-style: italic;
 	font-weight: 300;
-	color: #6b6b6b;
+	color: rgb(50, 50, 50);
 	width: 90%;
 	max-width: 490px;
 	min-height: 60px;
@@ -103,7 +127,7 @@ textarea:focus-visible {
 	}
 
 	.tarea-texto {
-		font-size: 15px;
+		font-size: 16px;
 		align-items: center;
 		overflow-wrap: anywhere;
 		padding: 6px 10px 6px 10px;
@@ -125,7 +149,7 @@ textarea:focus-visible {
 
 @media (max-width: 680px) {
 	.tarea-texto {
-		font-size: 15px;
+		font-size: 16px;
 		align-items: center;
 		overflow-wrap: anywhere;
 		padding: 6px 10px 6px 10px;

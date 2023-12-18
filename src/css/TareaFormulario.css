@@ -12,7 +12,7 @@
 	width: 100%;
 	max-width: 350px;
 	font-size: 18px;
-	font-family: helvetica, 'Kodchasan', sans-serif;
+	font-family: 'Red Hat Display', helvetica, sans-serif;
 	color: #242424;
 	background-color: white;
 	padding: 14px 32px 14px 16px;
@@ -28,7 +28,9 @@
 .tarea-boton {
 	padding: 16px;
 	font-size: 18px;
-	font-family: helvetica, 'Kodchasan', sans-serif;
+	font-family: 'Red Hat Display',
+		helvetica,
+		sans-serif;
 	border: none;
 	cursor: pointer;
 	outline: none;
@@ -39,7 +41,7 @@
 }
 
 .tarea-boton:hover {
-	background-color: #3b3b3b;
+	background-color: rgb(69, 69, 69);
 }
 
 @media (max-width: 680px) {
