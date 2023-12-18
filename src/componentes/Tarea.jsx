@@ -76,17 +76,19 @@ function Tarea({
 							width < 321
 								? 18
 								: width < 361
-								? 21
-								: width < 376
-								? 22
-								: width < 385
-								? 23
-								: width < 391
-								? 24
-								: width < 415
 								? 26
+								: width < 376
+								? 28
+								: width < 385
+								? 29
+								: width < 391
+								? 29
+								: width < 415
+								? 30
 								: width < 429
 								? 27
+								: width < 821
+								? 38
 								: width < 1921
 								? 38
 								: width < 3841

@@ -105,13 +105,12 @@ function App() {
 			)}
 			<Logo imagen={logo} />
 			<div className='tareas-lista-principal'>
-				{/* <h1>Mis Tareas</h1> */}
-
 				<TareaFormulario
 					input={input}
 					setInput={setInput}
 					onSubmit={agregarTarea}
 				/>
+				<h1>Mis Tareas</h1>
 				<div className='titulo-etiquetas'>
 					<EtiquetaColor
 						tipo='totales'

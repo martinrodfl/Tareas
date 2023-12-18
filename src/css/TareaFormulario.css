@@ -12,7 +12,7 @@
 	width: 100%;
 	max-width: 350px;
 	font-size: 18px;
-	font-family: 'Kodchasan', sans-serif;
+	font-family: helvetica, 'Kodchasan', sans-serif;
 	color: #242424;
 	background-color: white;
 	padding: 14px 32px 14px 16px;
@@ -28,7 +28,7 @@
 .tarea-boton {
 	padding: 16px;
 	font-size: 18px;
-	font-family: 'Kodchasan', sans-serif;
+	font-family: helvetica, 'Kodchasan', sans-serif;
 	border: none;
 	cursor: pointer;
 	outline: none;
