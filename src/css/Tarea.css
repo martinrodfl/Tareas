@@ -46,6 +46,13 @@
 	color: rgb(2, 82, 180);
 }
 
+/* textarea:active,
+textarea:focus-visible {
+	background-color: rgb(35, 35, 85);
+	border: none;
+	outline: none;
+} */
+
 .tarea-texto {
 	width: 90%;
 	height: 78px;
@@ -114,6 +121,7 @@
 	.tarea-contenedor.completada {
 		width: 90%;
 	}
+
 }
 
 @media (max-width: 680px) {

@@ -27,6 +27,7 @@ function Tarea({
 	const [isEditing, setIsEditing] = useState(false);
 
 	const { width } = useScreenSize();
+	console.log(width);
 
 	const handleTextChange = (event) => {
 		setText(event.target.value);
@@ -73,19 +74,23 @@ function Tarea({
 						rows={3}
 						cols={
 							width < 321
-								? 22
+								? 18
 								: width < 361
-								? 27
+								? 21
 								: width < 376
-								? 28
+								? 22
 								: width < 385
-								? 29
+								? 23
 								: width < 391
-								? 30
+								? 24
 								: width < 415
-								? 33
-								: width < 500
-								? 35
+								? 26
+								: width < 429
+								? 27
+								: width < 1921
+								? 38
+								: width < 3841
+								? 38
 								: 48
 						}
 					/>
