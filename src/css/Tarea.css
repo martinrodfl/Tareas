@@ -1,5 +1,6 @@
 .tarea-contenedor {
 	width: 95%;
+	height: 100%;
 	max-width: 500px;
 	background-color: rgb(46, 46, 46);
 	margin: 5px 0;
@@ -18,7 +19,6 @@
 .tarea-contenedor:hover {
 	background-color: rgb(37, 37, 37);
 	border: 1px solid rgb(106, 106, 106);
-	font-weight: 600;
 }
 
 .completar-tarea-onclick {
@@ -39,7 +39,7 @@
 
 .completar-tarea-onclick-completada {
 	min-width: 35px;
-	height: 78px;
+	min-height: 78px;
 	border-right: 1px dashed rgba(83, 83, 83, 0.525);
 	color: #3f3f3f;
 	display: flex;
@@ -62,16 +62,42 @@ textarea:focus-visible {
 
 .tarea-texto {
 	width: 90%;
-	height: 78px;
+	min-height: 78px;
 	font-size: 20px;
 	display: flex;
 	align-items: center;
 	overflow-wrap: anywhere;
 	padding: 8px 15px 8px 20px;
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	flex-shrink: 1;
 	background-color: transparent;
+}
 
+svg {
+	display: flex;
+	height: 100%;
+}
+
+.tarea-texto>p {
+	display: flex;
+	width: 100%;
+	height: 60%;
+	align-items: center;
+	overflow-y: scroll;
+}
+
+.tarea-texto>div {
+	display: flex;
+	width: 100%;
+	height: 30%;
+	min-height: 16px;
+	font-size: 12px;
+	align-items: end;
+	margin-top: 10px;
+	color: orange;
+	font-weight: 400;
 }
 
 .tarea-contenedor-iconos {
@@ -116,11 +142,11 @@ textarea:focus-visible {
 	text-decoration: line-through;
 	font-style: italic;
 	font-weight: 300;
-	color: rgb(50, 50, 50);
+	color: rgb(94, 94, 94);
 	width: 90%;
 	max-width: 490px;
 	min-height: 60px;
-	border: 1px solid rgb(55, 55, 55);
+	border: 1px dashed rgb(55, 55, 55);
 
 
 	.tarea-icono {
