@@ -69,6 +69,7 @@ const ListaDeTareas = ({
 												id={tarea.id}
 												texto={tarea.texto}
 												completada={tarea.completada}
+												fechaCreacion={tarea.fechaCreacion}
 												completarTarea={completarTarea}
 												eliminarTarea={eliminarTarea}
 												editarTarea={editarTarea}

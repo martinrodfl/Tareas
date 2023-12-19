@@ -33,7 +33,7 @@ function App() {
 
 	const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false);
 
-	// console.table(tareas);
+	console.table(tareas);
 
 	let cantidadCompletadas = cantidadPorPropiedad(tareas);
 
@@ -44,7 +44,7 @@ function App() {
 			const tareasActualizadas = [tarea, ...tareas];
 			setTareas(tareasActualizadas);
 			guardarLocalStorage('TAREAS', tareasActualizadas);
-			console.log('se estaguardando la tarea.....');
+			console.log('Tarea guardada');
 		}
 	};
 

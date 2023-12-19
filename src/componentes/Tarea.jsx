@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import TiempoCreacion from './TiempoCreacion.jsx';
+
 import useScreenSize from '../hooks/useScreenSize.jsx';
 
 import { TfiTrash } from 'react-icons/tfi';
@@ -18,6 +20,7 @@ function Tarea({
 	id,
 	texto,
 	completada,
+	fechaCreacion,
 	completarTarea,
 	eliminarTarea,
 	tareas,
@@ -27,7 +30,8 @@ function Tarea({
 	const [isEditing, setIsEditing] = useState(false);
 
 	const { width } = useScreenSize();
-	console.log(width);
+	console.log('FECHA DE CREACION EN TAREAS:', fechaCreacion);
+	console.log('FECHA DE CREACION EN TAREAS tipo:', typeof fechaCreacion);
 
 	const handleTextChange = (event) => {
 		setText(event.target.value);
@@ -99,6 +103,7 @@ function Tarea({
 				) : (
 					<p>{text}</p>
 				)}
+				<TiempoCreacion fechaCreacionString={fechaCreacion} />
 			</div>
 
 			<div className='tarea-contenedor-iconos'>
