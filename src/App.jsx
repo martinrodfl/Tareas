@@ -89,7 +89,7 @@ function App() {
 		console.log('editando.....', tarea.id);
 	};
 
-	const [modoDark, setModoDark] = useState(false);
+	const [modoDark, setModoDark] = useState(true);
 
 	const cambiarModo = () => {
 		setModoDark(!modoDark);
