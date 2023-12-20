@@ -2,7 +2,6 @@
 	width: 95%;
 	height: 100%;
 	max-width: 500px;
-	background-color: rgb(46, 46, 46);
 	margin: 5px 0;
 	display: flex;
 	justify-content: space-between;
@@ -10,16 +9,12 @@
 	border-radius: 8px;
 	font-weight: 400;
 	letter-spacing: .5px;
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 	user-select: none;
 	transition: all 0.3s linear;
-	border: 1px solid rgb(84, 84, 84);
+	/* border: 1px solid rgb(84, 84, 84); */
 }
 
-.tarea-contenedor:hover {
-	background-color: rgb(37, 37, 37);
-	border: 1px solid rgb(106, 106, 106);
-}
 
 .completar-tarea-onclick {
 	display: flex;
@@ -27,20 +22,16 @@
 	align-items: center;
 	width: 35px;
 	height: 78px;
-	border-right: 1px solid rgba(83, 83, 83, 0.525);
-	color: #02f99689;
 	border-radius: 5px 0px 0px 5px;
 	cursor: pointer;
 }
 
-.completar-tarea-onclick:hover {
-	color: #30f9a9ea;
-}
+
 
 .completar-tarea-onclick-completada {
 	min-width: 35px;
 	min-height: 78px;
-	border-right: 1px dashed rgba(83, 83, 83, 0.525);
+	border-right: 1px dashed;
 	color: #3f3f3f;
 	display: flex;
 	justify-content: center;
@@ -49,15 +40,10 @@
 	cursor: pointer;
 }
 
-.completar-tarea-onclick-completada:hover {
-	color: #02f99689;
-}
 
 textarea:active,
 textarea:focus-visible {
-	font-size: 16px;
-	transform-origin: top left;
-	transform: scale(0.75);
+	font-size: 15px;
 }
 
 .tarea-texto {
@@ -96,9 +82,10 @@ svg {
 	font-size: 12px;
 	align-items: end;
 	margin-top: 10px;
-	color: orange;
+	/* color: rgb(6, 215, 104); */
 	font-weight: 400;
 }
+
 
 .tarea-contenedor-iconos {
 	display: flex;
@@ -117,9 +104,6 @@ svg {
 	align-items: center;
 }
 
-.tarea-icono-chico:hover {
-	color: rgb(93, 205, 203);
-}
 
 .tarea-icono-grande {
 	font-size: 28px;
@@ -129,29 +113,14 @@ svg {
 	align-items: center;
 }
 
-.tarea-icono-grande:hover {
-	color: rgb(205, 93, 93);
-}
-
-.tarea-icono:hover {
-	color: rgb(128, 128, 128);
-}
 
 .tarea-contenedor.completada {
-	background-color: rgb(27, 27, 27);
 	text-decoration: line-through;
 	font-style: italic;
 	font-weight: 300;
-	color: rgb(94, 94, 94);
 	width: 90%;
 	max-width: 490px;
 	min-height: 60px;
-	border: 1px dashed rgb(55, 55, 55);
-
-
-	.tarea-icono {
-		color: #5c5c5c;
-	}
 
 	.tarea-texto {
 		font-size: 16px;
