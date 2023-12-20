@@ -15,12 +15,11 @@
   scrollbar-width: thin;
   scrollbar-color: #3d3d3d;
   scroll-behavior: smooth;
-}
 
-@media (prefers-color-scheme: system) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+  --bg-color-dark: rgb(0, 0, 0);
+  --font-color-dark: whitesmoke;
+
+  --bg-color-light: whitesmoke;
+  --font-color-light: rgb(0, 0, 0);
 
 }

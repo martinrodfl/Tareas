@@ -30,8 +30,8 @@ function Tarea({
 	const [isEditing, setIsEditing] = useState(false);
 
 	const { width } = useScreenSize();
-	console.log('FECHA DE CREACION EN TAREAS:', fechaCreacion);
-	console.log('FECHA DE CREACION EN TAREAS tipo:', typeof fechaCreacion);
+	// console.log('FECHA DE CREACION EN TAREAS:', fechaCreacion);
+	// console.log('FECHA DE CREACION EN TAREAS tipo:', typeof fechaCreacion);
 
 	const handleTextChange = (event) => {
 		setText(event.target.value);
@@ -80,15 +80,15 @@ function Tarea({
 							width < 321
 								? 18
 								: width < 361
-								? 26
+								? 23
 								: width < 376
-								? 28
+								? 24
 								: width < 385
 								? 29
 								: width < 391
 								? 29
 								: width < 415
-								? 30
+								? 28
 								: width < 429
 								? 27
 								: width < 821
@@ -103,7 +103,14 @@ function Tarea({
 				) : (
 					<p>{text}</p>
 				)}
-				<TiempoCreacion fechaCreacionString={fechaCreacion} />
+				<TiempoCreacion
+					className={
+						completada
+							? '.tiempo-creacion tiempo-completada '
+							: 'tiempo-creacion'
+					}
+					fechaCreacionString={fechaCreacion}
+				/>
 			</div>
 
 			<div className='tarea-contenedor-iconos'>

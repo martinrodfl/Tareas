@@ -2,15 +2,108 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
 }
 
-html {
-	display: flex;
-	flex-direction: column;
+.light-mode {
+	color: var(--font-color-light);
+	background-color: var(--bg-color-light);
+
+	.tarea-input {
+		background-color: var(--bg-color-light);
+		color: var(--font-color-light);
+
+
+	}
+
+	.tarea-input:focus {
+		box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	}
+
+	.tarea-boton {
+		background: var(--bg-color-dark);
+		color: var(--font-color-dark);
+	}
+
+	.completar-tarea-onclick {
+		border-right: 1px solid rgb(84, 84, 84);
+	}
+
+	.tarea-contenedor {
+		background-color: rgb(255, 255, 255);
+		border: 1px solid rgb(43, 43, 43);
+
+		.tarea-texto>div {
+			color: rgb(255, 123, 0);
+		}
+	}
+
+	.tarea-contenedor.completada {
+		background-color: transparent;
+		border: 1px dashed rgb(148, 148, 148);
+		color: rgb(94, 94, 94);
+
+		.tarea-texto>div {
+			color: rgb(94, 94, 94);
+		}
+	}
+
 }
+
+.dark-mode {
+	color: var(--font-color-dark);
+	background-color: var(--bg-color-dark);
+
+	.tarea-input {
+		background-color: var(--bg-color-dark);
+		color: var(--font-color-dark);
+	}
+
+	.totales {
+		color: whitesmoke;
+	}
+
+	.tarea-input:focus {
+		box-shadow: 0 0 0 1px #ffffff;
+	}
+
+	.tarea-boton {
+		background: #ffffff;
+		color: var(--bg-color-dark);
+	}
+
+	.completar-tarea-onclick {
+		border-right: 1px solid rgb(43, 43, 43);
+	}
+
+
+	.tarea-contenedor {
+		background-color: rgb(26, 26, 26);
+		border: 1px solid rgb(43, 43, 43);
+
+		.tarea-texto>div {
+			color: rgb(6, 215, 104);
+		}
+
+		.completar-tarea-onclick {
+			color: rgb(6, 215, 104);
+		}
+	}
+
+	.tarea-contenedor.completada {
+		background-color: transparent;
+		border: 1px dashed rgb(55, 55, 55);
+		color: rgb(94, 94, 94);
+
+		.tarea-texto>div {
+			color: rgb(94, 94, 94);
+		}
+	}
+
+}
+
 
 h1 {
-	color: whitesmoke;
 	font-size: 25px;
 	text-align: center;
 	margin: 0 0 5px 0;

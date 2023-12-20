@@ -1,14 +1,12 @@
 import { useState } from 'react';
 
+import Navbar from './componentes/Navbar.jsx';
+
 import ListaDeTareas from './componentes/ListaDeTareas';
 
 import TareaFormulario from './componentes/TareaFormulario';
 
 import EtiquetaColor from './componentes/EtiquetaColor.jsx';
-
-import Logo from './componentes/Logo';
-
-import logo from '../src/assets/LogoName.svg';
 
 import Modal from './componentes/Modal.jsx';
 
@@ -91,52 +89,64 @@ function App() {
 		console.log('editando.....', tarea.id);
 	};
 
+	const [modoDark, setModoDark] = useState(false);
+
+	const cambiarModo = () => {
+		setModoDark(!modoDark);
+	};
+
 	return (
-		<div className='aplicacion-tareas'>
-			{mostrarConfirmacion && (
-				<Modal
-					titulo='Confirmar Eliminacion'
-					onConfirm={manejarConfirmacionDeEliminacion}
-					onCancel={() => setMostrarConfirmacion(false)}
-					isOpen={mostrarConfirmacion}
-				>
-					¿Estás seguro de que quieres borrar este elemento?
-				</Modal>
-			)}
-			<Logo imagen={logo} />
-			<div className='tareas-lista-principal'>
-				<TareaFormulario
-					input={input}
-					setInput={setInput}
-					onSubmit={agregarTarea}
+		<body className={modoDark ? 'dark-mode' : 'light-mode'}>
+			<div className='aplicacion-tareas'>
+				{mostrarConfirmacion && (
+					<Modal
+						titulo='Confirmar Eliminacion'
+						onConfirm={manejarConfirmacionDeEliminacion}
+						onCancel={() => setMostrarConfirmacion(false)}
+						isOpen={mostrarConfirmacion}
+					>
+						¿Estás seguro de que quieres borrar este elemento?
+					</Modal>
+				)}
+				<Navbar
+					mododark={modoDark}
+					cambiarModo={cambiarModo}
+					tipo={modoDark}
 				/>
-				<h1>Mis Tareas</h1>
-				<div className='titulo-etiquetas'>
-					<EtiquetaColor
-						tipo='totales'
-						texto='Totales'
-						cantidad={tareas.length}
+				<div className='tareas-lista-principal'>
+					<TareaFormulario
+						input={input}
+						setInput={setInput}
+						onSubmit={agregarTarea}
 					/>
-					<EtiquetaColor
-						tipo='incompletas'
-						texto='Por hacer'
-						cantidad={tareas.length - cantidadCompletadas}
-					/>
-					<EtiquetaColor
-						tipo='completadas'
-						texto='Completadas'
-						cantidad={cantidadCompletadas}
+					<h1>Mis Tareas</h1>
+					<div className='titulo-etiquetas'>
+						<EtiquetaColor
+							tipo='totales'
+							texto='Totales'
+							cantidad={tareas.length}
+						/>
+						<EtiquetaColor
+							tipo='incompletas'
+							texto='Por hacer'
+							cantidad={tareas.length - cantidadCompletadas}
+						/>
+						<EtiquetaColor
+							tipo='completadas'
+							texto='Completadas'
+							cantidad={cantidadCompletadas}
+						/>
+					</div>
+					<ListaDeTareas
+						tareas={tareas}
+						eliminarTarea={eliminarTarea}
+						completarTarea={completarTarea}
+						setTareas={setTareas}
+						editarTarea={editarTarea}
 					/>
 				</div>
-				<ListaDeTareas
-					tareas={tareas}
-					eliminarTarea={eliminarTarea}
-					completarTarea={completarTarea}
-					setTareas={setTareas}
-					editarTarea={editarTarea}
-				/>
 			</div>
-		</div>
+		</body>
 	);
 }
 
