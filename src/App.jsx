@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SplashScreen from './componentes/SplashScreen.jsx';
 
 import Navbar from './componentes/Navbar.jsx';
 
@@ -97,6 +98,7 @@ function App() {
 
 	return (
 		<div className={modoDark ? 'dark-mode' : 'light-mode'}>
+			<SplashScreen />
 			<div className='aplicacion-tareas'>
 				{mostrarConfirmacion && (
 					<Modal

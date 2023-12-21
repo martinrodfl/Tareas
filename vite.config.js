@@ -28,7 +28,10 @@ export default defineConfig({
 					},
 				],
 			},
-			includeAssets: ['st-16x16px.png', 'st-180x180px.png', 'mask-icon.svg'],
+			includeAssets: [
+				'/src/assets/pwaIcons/st-16x16px.png',
+				'/src/assets/pwaIcons/st-180x180px.png',
+			],
 			manifest: {
 				name: 'Tareas Simples',
 				short_name: 'Tareas',
@@ -81,13 +84,13 @@ export default defineConfig({
 					},
 					{
 						src: '/src/assets/pwaIcons/st-512x512px.png',
-						sizes: '400x400',
+						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'any',
 					},
 					{
 						src: '/src/assets/pwaIcons/st-512x512px.png',
-						sizes: '400x400',
+						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'any maskable',
 					},
