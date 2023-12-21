@@ -2,10 +2,6 @@ import { useEffect, useState } from 'react';
 import { calcularTiempoTranscurrido } from '../funciones/calcularTiempoTranscurrido.js';
 
 const TiempoCreacion = ({ fechaCreacionString }) => {
-	// console.log(
-	// 	'🚀 ~ file: TiempoCreacion.jsx:5 ~ TiempoCreacion ~ fechaCreacionString:',
-	// 	fechaCreacionString
-	// );
 	const fechaCreacion = new Date(fechaCreacionString).toLocaleDateString();
 	const [tiempoTranscurrido, setTiempoTranscurrido] = useState('');
 	useEffect(() => {
@@ -13,7 +9,7 @@ const TiempoCreacion = ({ fechaCreacionString }) => {
 			const tiempo = calcularTiempoTranscurrido(fechaCreacionString);
 
 			setTiempoTranscurrido(tiempo);
-		}, 30000);
+		}, 10000);
 	}, [fechaCreacionString]);
 
 	return (

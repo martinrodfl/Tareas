@@ -1,8 +1,4 @@
 export function calcularTiempoTranscurrido(fechaCreacion) {
-	console.log(
-		'🚀 ~ file: calcularTiempoTranscurrido.js:2 ~ fechaCreacion:',
-		fechaCreacion
-	);
 	let fechaCreacionObj = new Date(fechaCreacion);
 
 	let ahora = new Date();

@@ -2,7 +2,7 @@ import '../css/Navbar.css';
 const Navbar = (props) => {
 	return (
 		<div className='Nav'>
-			<h1>TareasSimples</h1>
+			<h1>Tareas Simples</h1>
 			<div className='switch-container'>
 				<label className='switch'>
 					<input
