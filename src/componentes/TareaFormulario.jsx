@@ -19,6 +19,7 @@ function TareaFormulario({ input, setInput, onSubmit }) {
 		};
 
 		onSubmit(tareaNueva);
+		setInput('');
 	};
 
 	return (
@@ -29,11 +30,17 @@ function TareaFormulario({ input, setInput, onSubmit }) {
 			<input
 				className='tarea-input'
 				type='text'
-				placeholder='Escribe una Tarea'
 				name='texto'
 				onChange={manejarCambio}
 				autoComplete='off'
+				id='input'
+				value={input}
 			/>
+			<label
+				htmlFor='input'
+				title=' Escribe una Tarea '
+				data-title=' Escribe una Tarea '
+			></label>
 			<button className='tarea-boton'>Agregar Tarea</button>
 		</form>
 	);

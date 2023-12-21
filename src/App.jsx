@@ -96,7 +96,7 @@ function App() {
 	};
 
 	return (
-		<body className={modoDark ? 'dark-mode' : 'light-mode'}>
+		<div className={modoDark ? 'dark-mode' : 'light-mode'}>
 			<div className='aplicacion-tareas'>
 				{mostrarConfirmacion && (
 					<Modal
@@ -119,7 +119,7 @@ function App() {
 						setInput={setInput}
 						onSubmit={agregarTarea}
 					/>
-					<h1>Mis Tareas</h1>
+					{/* <h1>Mis Tareas</h1> */}
 					<div className='titulo-etiquetas'>
 						<EtiquetaColor
 							tipo='totales'
@@ -146,7 +146,7 @@ function App() {
 					/>
 				</div>
 			</div>
-		</body>
+		</div>
 	);
 }
 

@@ -66,7 +66,7 @@ function Tarea({
 				}
 				onClick={() => completarTarea(id)}
 			>
-				<MdOutlineDoneOutline />
+				<MdOutlineDoneOutline className={completada || 'vibrate'} />
 			</div>
 
 			<div className='editable-card tarea-texto'>
@@ -116,18 +116,18 @@ function Tarea({
 			<div className='tarea-contenedor-iconos'>
 				{isEditing ? (
 					<TfiSave
-						className='tarea-icono-chico'
+						className='tarea-icono-chico vibrate'
 						onClick={handleSaveClick}
 					/>
 				) : (
 					<TfiPencil
-						className='tarea-icono-chico'
+						className='tarea-icono-chico vibrate'
 						onClick={handleEditClick}
 					/>
 				)}
 
 				<TfiTrash
-					className='tarea-icono-grande'
+					className='tarea-icono-grande vibrate'
 					onClick={() => eliminarTarea(id)}
 				/>
 			</div>

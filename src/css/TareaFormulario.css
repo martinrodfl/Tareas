@@ -8,17 +8,55 @@
 	padding: 5px 0;
 }
 
+.label-before {
+	line-height: 10px;
+	font-size: 19px;
+	top: 10px;
+	padding: 0 6px;
+	left: 9px;
+}
+
+form {
+	position: relative;
+	margin-bottom: 15px;
+
+	label::before {
+		content: attr(title);
+		position: absolute;
+		top: 21px;
+		left: 110px;
+		line-height: 20px;
+		font-size: 18px;
+		transition: 300ms all;
+	}
+}
+
 .tarea-input {
 	width: 100%;
 	max-width: 350px;
 	font-size: 18px;
 	font-family: 'Red Hat Display', helvetica, sans-serif;
 	padding: 14px 32px 14px 16px;
-	border: 1px solid #3b3b3b;
+	border: 1px solid;
 	outline: none;
 	border-radius: 4px 0 0 4px;
 }
 
+.tarea-input:focus {
+	top: 30px;
+	left: 110px;
+	outline: 0;
+}
+
+.tarea-input:valid+label::before {
+	content: attr(data-title);
+}
+
+.tarea-input:focus+label::before {
+	position: absolute;
+	top: -6px;
+	left: 100px;
+}
 
 .tarea-boton {
 	padding: 16px;
@@ -28,15 +66,9 @@
 	border: none;
 	cursor: pointer;
 	outline: none;
-	/* background: #323131;
-	color: #fff; */
 	text-transform: capitalize;
 	border-radius: 0 4px 4px 0;
 }
-
-/* .tarea-boton:hover {
-	background-color: rgb(69, 69, 69);
-} */
 
 @media (max-width: 680px) {
 	.tarea-input {
@@ -53,7 +85,6 @@
 		margin-top: 5px;
 		padding: 9px;
 		font-size: 15px;
-		/* border: 0.5px solid rgba(245, 245, 245, 0.088); */
 		border-radius: 4px;
 	}
 }
