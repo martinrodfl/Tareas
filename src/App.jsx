@@ -121,7 +121,6 @@ function App() {
 						setInput={setInput}
 						onSubmit={agregarTarea}
 					/>
-					{/* <h1>Mis Tareas</h1> */}
 					<div className='titulo-etiquetas'>
 						<EtiquetaColor
 							tipo='totales'
