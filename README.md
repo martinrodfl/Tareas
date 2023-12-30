@@ -1,4 +1,4 @@
-# TareasSimples
+# SimpleTasks/TareasSimples
 
 Aplicación para guardar tareas(la clasica "todo app").
 Basada en tutorial de FreeCodeCamp.
@@ -14,4 +14,8 @@ Responsiva para casi todos los tamaños de pantallas de telefonos moviles.
 
 ## v2
 
-Convertirla PWA para poder acceder rapido desde cualquier dispositivo teniendo un icono en el escritorio o pantalla inicial del movil.(Poximamente)
+Se hizo la aplicacion PWA
+
+## v3
+
+App Español-Ingles(proximammente)
