@@ -32,7 +32,7 @@ function App() {
 
 	const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false);
 
-	console.table(tareas);
+	// console.table(tareas);
 
 	let cantidadCompletadas = cantidadPorPropiedad(tareas);
 
