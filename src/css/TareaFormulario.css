@@ -46,6 +46,7 @@ form {
 	top: 30px;
 	left: 110px;
 	outline: 0;
+
 }
 
 .tarea-input:valid+label::before {
@@ -70,6 +71,27 @@ form {
 	border-radius: 0 4px 4px 0;
 }
 
+@media (max-width: 766px) {
+
+
+	form {
+		position: relative;
+		margin-bottom: 15px;
+
+		label::before {
+			content: attr(title);
+			position: absolute;
+			top: 21px;
+			left: 96px;
+			line-height: 20px;
+			font-size: 18px;
+			transition: 300ms all;
+		}
+	}
+
+
+}
+
 @media (max-width: 680px) {
 	.tarea-input {
 		width: 90%;
@@ -80,6 +102,12 @@ form {
 
 	}
 
+	.tarea-input:focus+label::before {
+		position: absolute;
+		top: -6px;
+		left: 27px;
+	}
+
 	.tarea-boton {
 		width: 90%;
 		max-width: 492px;
@@ -87,5 +115,20 @@ form {
 		padding: 9px;
 		font-size: 15px;
 		border-radius: 4px;
+	}
+
+	form {
+		position: relative;
+		margin-bottom: 15px;
+
+		label::before {
+			content: attr(title);
+			position: absolute;
+			top: 16px;
+			left: 26px;
+			line-height: 20px;
+			font-size: 18px;
+			transition: 300ms all;
+		}
 	}
 }
