@@ -197,19 +197,19 @@ h1 {
 	}
 
 	20% {
-		transform: translateX(-2px) rotate(-1deg);
+		transform: translateX(-1px) rotate(-10deg);
 	}
 
 	40% {
-		transform: translateX(2px) rotate(1deg);
+		transform: translateX(1px) rotate(10deg);
 	}
 
 	60% {
-		transform: translateX(-2px) rotate(-1deg);
+		transform: translateX(-1px) rotate(-10deg);
 	}
 
 	80% {
-		transform: translateX(2px) rotate(1deg);
+		transform: translateX(1px) rotate(10deg);
 	}
 
 	100% {
