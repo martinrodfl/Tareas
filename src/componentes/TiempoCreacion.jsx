@@ -9,22 +9,29 @@ const TiempoCreacion = ({ fechaCreacionString }) => {
 	const fechaCreacion = new Date(fechaCreacionString).toLocaleDateString();
 
 	const [tiempoTranscurrido, setTiempoTranscurrido] = useState('');
-	// useEffect(() => {
+
 	setInterval(() => {
 		if (lang === 'es') {
 			setTiempoTranscurrido(calcularTiempoTranscurrido(fechaCreacionString));
+			return;
 		} else {
 			setTiempoTranscurrido(calcularTiempoTranscurridoEN(fechaCreacionString));
+			return;
 		}
-	}, 1000);
-	// }, [fechaCreacionString, lang]);
-	// console.log({ tiempoTranscurrido });
+	}, 10000);
+
 	return (
 		<div>
 			{tiempoTranscurrido ? (
-				<p>
-					{texts?.createdAt} {tiempoTranscurrido}
-				</p>
+				lang === 'en' ? (
+					<p>
+						{texts?.createdAt} {tiempoTranscurrido} {'ago'}
+					</p>
+				) : (
+					<p>
+						{texts?.createdAt} {tiempoTranscurrido}
+					</p>
+				)
 			) : (
 				<p>
 					{texts?.createdOn} {fechaCreacion}
