@@ -1,11 +1,12 @@
 import { createContext, useState } from 'react';
+
 import {
 	guardarLocalStorage,
 	obtenerLocalStorage,
 } from '../funciones/guardarEnLocalStorage';
+
 const LanguageContext = createContext();
 
-// const initialLanguage = obtenerLocalStorage('lang');
 const translations = {
 	es: {
 		titleApp: 'Tareas Simples',
@@ -58,7 +59,7 @@ const translations = {
 const LanguageProvider = ({ children }) => {
 	const [lang, setLang] = useState(obtenerLocalStorage('lang'));
 	const [texts, setTexts] = useState(translations[lang]);
-
+	// console.log(texts);
 	const handleLang = () => {
 		const newLang = lang === 'es' ? 'en' : 'es';
 		setLang(newLang);

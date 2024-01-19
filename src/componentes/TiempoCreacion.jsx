@@ -23,11 +23,11 @@ const TiempoCreacion = ({ fechaCreacionString }) => {
 		<div>
 			{tiempoTranscurrido ? (
 				<p>
-					{texts.createdAt} {tiempoTranscurrido}
+					{texts?.createdAt} {tiempoTranscurrido}
 				</p>
 			) : (
 				<p>
-					{texts.createdOn} {fechaCreacion}
+					{texts?.createdOn} {fechaCreacion}
 				</p>
 			)}
 		</div>

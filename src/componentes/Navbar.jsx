@@ -8,7 +8,7 @@ const Navbar = ({ modoDark, cambiarModo }) => {
 
 	return (
 		<div className='Nav'>
-			<h1 className='titulo-app'>{texts.titleApp}</h1>
+			<h1 className='titulo-app'>{texts?.titleApp}</h1>
 			<SwitchIdioma />
 
 			<div className='switch-container'>

@@ -29,6 +29,8 @@ let initialValue = obtenerLocalStorage('TAREAS');
 function App() {
 	const { texts } = useContext(LanguageContext);
 
+	// console.log({ texts });
+
 	// console.log('TEXTS APP', texts);
 	const [input, setInput] = useState('');
 
@@ -107,12 +109,12 @@ function App() {
 			<div className='aplicacion-tareas'>
 				{mostrarConfirmacion && (
 					<Modal
-						titulo={texts.titleDeleteModal}
+						titulo={texts?.titleDeleteModal}
 						onConfirm={manejarConfirmacionDeEliminacion}
 						onCancel={() => setMostrarConfirmacion(false)}
 						isOpen={mostrarConfirmacion}
 					>
-						{texts.messageDeleteModal}
+						{texts?.messageDeleteModal}
 					</Modal>
 				)}
 				<Navbar
@@ -129,17 +131,17 @@ function App() {
 					<div className='titulo-etiquetas'>
 						<EtiquetaColor
 							tipo='totales'
-							texto={texts.totals}
+							texto={texts?.totals}
 							cantidad={tareas.length}
 						/>
 						<EtiquetaColor
 							tipo='incompletas'
-							texto={texts.toDo}
+							texto={texts?.toDo}
 							cantidad={tareas.length - cantidadCompletadas}
 						/>
 						<EtiquetaColor
 							tipo='completadas'
-							texto={texts.completed}
+							texto={texts?.completed}
 							cantidad={cantidadCompletadas}
 						/>
 					</div>
