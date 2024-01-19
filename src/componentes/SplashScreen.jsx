@@ -24,7 +24,7 @@ const SplashScreen = () => {
 						/>
 					</div>
 					<div className='pantalla-inicio-container-name'>
-						<h1>{texts?.titleApp} sdsdsdssd</h1>
+						<h1>{texts?.titleApp}</h1>
 					</div>
 				</div>
 			)}
