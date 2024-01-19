@@ -5,6 +5,8 @@ import {
 	obtenerLocalStorage,
 } from '../funciones/guardarEnLocalStorage';
 
+guardarLocalStorage('lang', 'es');
+
 const LanguageContext = createContext();
 
 const translations = {
