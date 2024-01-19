@@ -45,9 +45,9 @@ function TareaFormulario({ input, setInput, onSubmit }) {
 			<label
 				htmlFor='input'
 				title=' Escribe una Tarea '
-				data-title={texts.inputText}
+				data-title={texts?.inputText}
 			></label>
-			<button className='tarea-boton'>{texts.buttonText}</button>
+			<button className='tarea-boton'>{texts?.buttonText}</button>
 		</form>
 	);
 }

@@ -39,13 +39,13 @@ const Modal = ({ children, titulo, onConfirm, onCancel, isOpen, tareaId }) => {
 								className='boton-cancelar'
 								onClick={manejarCierreModal}
 							>
-								{texts.cancelButton}
+								{texts?.cancelButton}
 							</button>
 							<button
 								className='boton-eliminar'
 								onClick={manejarConfirmacion}
 							>
-								{texts.confirmButton}
+								{texts?.confirmButton}
 							</button>
 						</div>
 					</div>
