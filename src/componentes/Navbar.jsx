@@ -1,18 +1,25 @@
+import { SwitchIdioma } from './SwitchIdioma';
+import { useContext } from 'react';
+import LanguageContext from '../context/LanguageContext';
 import '../css/Navbar.css';
-const Navbar = (props) => {
+
+const Navbar = ({ modoDark, cambiarModo }) => {
+	const { texts } = useContext(LanguageContext);
+
 	return (
 		<div className='Nav'>
-			<h1>Tareas Simples</h1>
+			<h1 className='titulo-app'>{texts.titleApp}</h1>
+			<SwitchIdioma />
+
 			<div className='switch-container'>
 				<label className='switch'>
 					<input
 						type='checkbox'
-						checked={props.modoDark}
-						onChange={props.cambiarModo}
+						checked={modoDark}
+						onChange={cambiarModo}
 					/>
 					<span className='slider'></span>
 				</label>
-				{/* Resto de tu contenido */}
 			</div>
 		</div>
 	);

@@ -1,4 +1,4 @@
-export function calcularTiempoTranscurrido(fechaCreacion) {
+export function calcularTiempoTranscurridoEN(fechaCreacion) {
 	let fechaCreacionObj = new Date(fechaCreacion);
 
 	let ahora = new Date();
@@ -17,18 +17,18 @@ export function calcularTiempoTranscurrido(fechaCreacion) {
 	// Devolver el resultado como cadena
 
 	if (segundos < 60) {
-		return formatearDosCifras(segundos) + ' segundos';
+		return formatearDosCifras(segundos) + ' seconds';
 	} else if (minutos < 60) {
-		return formatearDosCifras(minutos) + ' minutos';
+		return formatearDosCifras(minutos) + ' minutes';
 	} else if (horas < 24) {
-		return formatearDosCifras(horas) + ' horas';
+		return formatearDosCifras(horas) + ' hours';
 	} else if (dias < 7) {
-		return formatearDosCifras(dias) + ' días';
+		return formatearDosCifras(dias) + ' days';
 	} else if (semanas < 4) {
-		return formatearDosCifras(semanas) + ' semanas';
+		return formatearDosCifras(semanas) + ' weeks';
 	} else if (meses < 12) {
-		return formatearDosCifras(meses) + ' meses';
+		return formatearDosCifras(meses) + ' months';
 	} else {
-		return formatearDosCifras(años) + ' años';
+		return formatearDosCifras(años) + ' years';
 	}
 }

@@ -14,7 +14,7 @@ Responsiva para casi todos los tamaños de pantallas de telefonos moviles.
 
 ## v2
 
-Se hizo la aplicacion PWA
+Se hizo la aplicacion PWA, se agregaron animaciones en el input e iconos
 
 ## v3
 
