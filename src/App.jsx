@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+
+import LanguageContext from './context/LanguageContext.jsx';
+
 import SplashScreen from './componentes/SplashScreen.jsx';
 
 import Navbar from './componentes/Navbar.jsx';
@@ -24,6 +27,9 @@ import './css/EtiquetaColor.css';
 let initialValue = obtenerLocalStorage('TAREAS');
 
 function App() {
+	const { texts } = useContext(LanguageContext);
+
+	// console.log('TEXTS APP', texts);
 	const [input, setInput] = useState('');
 
 	const [tareas, setTareas] = useState(initialValue ?? []);
@@ -66,7 +72,6 @@ function App() {
 			return tarea;
 		});
 
-		// Reordenar el array para poner las tareas completadas al final de la lista
 		const tareasOrdenadas = [
 			...tareasActualizadas.filter((tarea) => !tarea.completada),
 			...tareasActualizadas.filter((tarea) => tarea.completada),
@@ -102,12 +107,12 @@ function App() {
 			<div className='aplicacion-tareas'>
 				{mostrarConfirmacion && (
 					<Modal
-						titulo='Confirmar Eliminacion'
+						titulo={texts.titleDeleteModal}
 						onConfirm={manejarConfirmacionDeEliminacion}
 						onCancel={() => setMostrarConfirmacion(false)}
 						isOpen={mostrarConfirmacion}
 					>
-						¿Estás seguro de que quieres borrar este elemento?
+						{texts.messageDeleteModal}
 					</Modal>
 				)}
 				<Navbar
@@ -124,17 +129,17 @@ function App() {
 					<div className='titulo-etiquetas'>
 						<EtiquetaColor
 							tipo='totales'
-							texto='Totales'
+							texto={texts.totals}
 							cantidad={tareas.length}
 						/>
 						<EtiquetaColor
 							tipo='incompletas'
-							texto='Por hacer'
+							texto={texts.toDo}
 							cantidad={tareas.length - cantidadCompletadas}
 						/>
 						<EtiquetaColor
 							tipo='completadas'
-							texto='Completadas'
+							texto={texts.completed}
 							cantidad={cantidadCompletadas}
 						/>
 					</div>

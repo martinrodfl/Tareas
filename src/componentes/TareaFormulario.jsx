@@ -1,6 +1,12 @@
 import '../css/TareaFormulario.css';
 
+import { useContext } from 'react';
+
+import LanguageContext from '../context/LanguageContext';
+
 function TareaFormulario({ input, setInput, onSubmit }) {
+	const { texts } = useContext(LanguageContext);
+
 	const manejarCambio = (e) => {
 		setInput(e.target.value);
 	};
@@ -39,9 +45,9 @@ function TareaFormulario({ input, setInput, onSubmit }) {
 			<label
 				htmlFor='input'
 				title=' Escribe una Tarea '
-				data-title=' Escribe una Tarea '
+				data-title={texts.inputText}
 			></label>
-			<button className='tarea-boton'>Agregar Tarea</button>
+			<button className='tarea-boton'>{texts.buttonText}</button>
 		</form>
 	);
 }

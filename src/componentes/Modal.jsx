@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+
+import LanguageContext from '../context/LanguageContext';
 
 import '../css/Modal.css';
 
 const Modal = ({ children, titulo, onConfirm, onCancel, isOpen, tareaId }) => {
+	const { texts } = useContext(LanguageContext);
+
 	const [showModal, setShowModal] = useState(isOpen);
 
 	const manejarCierreModal = () => {
@@ -35,13 +39,13 @@ const Modal = ({ children, titulo, onConfirm, onCancel, isOpen, tareaId }) => {
 								className='boton-cancelar'
 								onClick={manejarCierreModal}
 							>
-								Cancelar
+								{texts.cancelButton}
 							</button>
 							<button
 								className='boton-eliminar'
 								onClick={manejarConfirmacion}
 							>
-								Confirmar
+								{texts.confirmButton}
 							</button>
 						</div>
 					</div>
