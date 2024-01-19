@@ -5,7 +5,12 @@ import {
 	obtenerLocalStorage,
 } from '../funciones/guardarEnLocalStorage';
 
-guardarLocalStorage('lang', 'es');
+let initialLanguage = obtenerLocalStorage('lang') || '';
+
+if (!initialLanguage) {
+	guardarLocalStorage('lang', 'es');
+	initialLanguage = 'es';
+}
 
 const LanguageContext = createContext();
 
@@ -59,7 +64,7 @@ const translations = {
 };
 
 const LanguageProvider = ({ children }) => {
-	const [lang, setLang] = useState(obtenerLocalStorage('lang'));
+	const [lang, setLang] = useState(initialLanguage);
 	const [texts, setTexts] = useState(translations[lang]);
 	// console.log(texts);
 	const handleLang = () => {
