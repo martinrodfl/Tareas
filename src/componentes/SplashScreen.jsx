@@ -20,7 +20,7 @@ const SplashScreen = () => {
 					<div className='pantalla-inicio-container-icon'>
 						<img
 							src={icon}
-							alt=''
+							alt='logo'
 						/>
 					</div>
 					<div className='pantalla-inicio-container-name'>

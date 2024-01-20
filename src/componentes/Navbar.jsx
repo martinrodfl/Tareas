@@ -12,8 +12,12 @@ const Navbar = ({ modoDark, cambiarModo }) => {
 			<SwitchIdioma />
 
 			<div className='switch-container'>
-				<label className='switch'>
+				<label
+					htmlFor='switchColor'
+					className='switch'
+				>
 					<input
+						id='switchColor'
 						type='checkbox'
 						checked={modoDark}
 						onChange={cambiarModo}
