@@ -30,8 +30,6 @@ function Tarea({
 	const [isEditing, setIsEditing] = useState(false);
 
 	const { width } = useScreenSize();
-	// console.log('FECHA DE CREACION EN TAREAS:', fechaCreacion);
-	// console.log('FECHA DE CREACION EN TAREAS tipo:', typeof fechaCreacion);
 
 	const handleTextChange = (event) => {
 		setText(event.target.value);

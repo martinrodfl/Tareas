@@ -1,24 +1,22 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import LanguageContext from '../context/LanguageContext.jsx';
 import { calcularTiempoTranscurrido } from '../funciones/calcularTiempoTranscurrido.js';
-import { calcularTiempoTranscurridoEN } from '../funciones/calcularTiempoTranscurridoEN.js';
 
 const TiempoCreacion = ({ fechaCreacionString }) => {
 	const { texts, lang } = useContext(LanguageContext);
-	// console.log({ lang });
+
 	const fechaCreacion = new Date(fechaCreacionString).toLocaleDateString();
 
 	const [tiempoTranscurrido, setTiempoTranscurrido] = useState('');
+	useEffect(() => {
+		const intervalId = setInterval(() => {
+			setTiempoTranscurrido(
+				calcularTiempoTranscurrido(fechaCreacionString, lang)
+			);
+		}, 1000);
 
-	setInterval(() => {
-		if (lang === 'es') {
-			setTiempoTranscurrido(calcularTiempoTranscurrido(fechaCreacionString));
-			return;
-		} else {
-			setTiempoTranscurrido(calcularTiempoTranscurridoEN(fechaCreacionString));
-			return;
-		}
-	}, 10000);
+		return () => clearInterval(intervalId);
+	}, [fechaCreacionString, lang]);
 
 	return (
 		<div>

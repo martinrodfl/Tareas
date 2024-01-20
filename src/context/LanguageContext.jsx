@@ -66,7 +66,7 @@ const translations = {
 const LanguageProvider = ({ children }) => {
 	const [lang, setLang] = useState(initialLanguage);
 	const [texts, setTexts] = useState(translations[lang]);
-	// console.log(texts);
+
 	const handleLang = () => {
 		const newLang = lang === 'es' ? 'en' : 'es';
 		setLang(newLang);
