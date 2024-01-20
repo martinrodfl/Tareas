@@ -71,11 +71,13 @@ export default defineConfig({
 						src: '/src/assets/pwaIcons/st-180x180px.png',
 						sizes: '180x180',
 						type: 'image/png',
+						purpose: 'any',
 					},
 					{
 						src: '/src/assets/pwaIcons/st-192x192px.png',
 						sizes: '192x192',
 						type: 'image/png',
+						purpose: 'any',
 					},
 					{
 						src: '/src/assets/pwaIcons/st-400x400px.png',
