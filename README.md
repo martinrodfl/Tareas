@@ -10,7 +10,9 @@ Para tener persistencia las tareas se guardan en localStorage.
 
 Responsiva para casi todos los tamaños de pantallas de telefonos moviles.
 
-Se hizo la aplicacion PWA, se agregaron animaciones en el input e iconos
+Algunos iconos animados.
+
+Se hizo la aplicacion PWA.
 
 App Español-Ingles
 
