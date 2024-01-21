@@ -42,7 +42,6 @@ const ListaDeTareas = ({
 					setTareas((prevTasks) =>
 						reordenarTareas(prevTasks, source.index, destination.index)
 					);
-					// console.log('TAREAS ONDRAGEND: ', tareas);
 				}}
 			>
 				<Droppable droppableId='tareass'>
