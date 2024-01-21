@@ -29,9 +29,6 @@ let initialValue = obtenerLocalStorage('TAREAS');
 function App() {
 	const { texts } = useContext(LanguageContext);
 
-	// console.log({ texts });
-
-	// console.log('TEXTS APP', texts);
 	const [input, setInput] = useState('');
 
 	const [tareas, setTareas] = useState(initialValue ?? []);
@@ -40,11 +37,8 @@ function App() {
 
 	const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false);
 
-	// console.table(tareas);
-
 	let cantidadCompletadas = cantidadPorPropiedad(tareas);
 
-	// Funciones
 	const agregarTarea = (tarea) => {
 		if (tarea.texto.trim()) {
 			tarea.texto = tarea.texto.trim();

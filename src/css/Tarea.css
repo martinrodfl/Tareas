@@ -8,7 +8,7 @@
 	align-items: center;
 	border-radius: 8px;
 	font-weight: 400;
-	letter-spacing: .5px;
+	letter-spacing: 0.5px;
 	user-select: none;
 	transition: all 0.3s linear;
 }
@@ -78,7 +78,6 @@ svg {
 	font-weight: 400;
 }
 
-
 .tarea-contenedor-iconos {
 	display: flex;
 	flex-direction: column;
@@ -130,7 +129,6 @@ svg {
 	.tarea-contenedor.completada {
 		width: 90%;
 	}
-
 }
 
 @media (max-width: 680px) {

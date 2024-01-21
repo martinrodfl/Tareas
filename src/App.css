@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
 }
 
 .light-mode {
@@ -12,7 +11,6 @@
 	.tarea-input {
 		background-color: var(--bg-color-light);
 		color: var(--font-color-light);
-
 	}
 
 	.tarea-input:focus+label::before {
@@ -49,7 +47,7 @@
 		}
 
 		.vibrate:hover {
-			animation: vibration .8s infinite;
+			animation: vibration 0.8s infinite;
 		}
 	}
 
@@ -71,10 +69,9 @@
 		}
 
 		.vibrate:hover {
-			animation: none
+			animation: none;
 		}
 	}
-
 }
 
 .dark-mode {
@@ -115,7 +112,6 @@
 		color: rgb(71, 156, 220);
 	}
 
-
 	.tarea-contenedor {
 		background-color: rgb(26, 26, 26);
 		border: 1px solid rgb(43, 43, 43);
@@ -129,7 +125,7 @@
 		}
 
 		.vibrate:hover {
-			animation: vibration .8s infinite;
+			animation: vibration 0.8s infinite;
 		}
 	}
 

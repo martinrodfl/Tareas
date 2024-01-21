@@ -1,7 +1,6 @@
 import { it, expect } from 'vitest';
 import { cantidadPorPropiedad } from '../funciones/cantidadPorPropiedad';
 
-// should return 0 when the argument is an empty array
 it('should return 0 when the argument is an empty array', () => {
 	const arg = [];
 
@@ -10,7 +9,6 @@ it('should return 0 when the argument is an empty array', () => {
 	expect(result).toEqual(0);
 });
 
-// Should return the number of items with 'completada' property set to true
 it('should return the number of items with completada property set to true', () => {
 	const arg = [
 		{ completada: true },
@@ -24,7 +22,6 @@ it('should return the number of items with completada property set to true', () 
 	expect(result).toEqual(3);
 });
 
-// Should return 0 when there are no items with 'completada' property set to true
 it('should return 0 when there are no items with completada property set to true', () => {
 	const arg = [
 		{ completada: false },

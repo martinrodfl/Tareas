@@ -47,7 +47,6 @@ form {
 	top: 30px;
 	left: 110px;
 	outline: 0;
-
 }
 
 .tarea-input:valid+label::before {
@@ -63,8 +62,7 @@ form {
 .tarea-boton {
 	padding: 16px;
 	font-size: 18px;
-	font-family: 'Red Hat Display',
-		sans-serif;
+	font-family: 'Red Hat Display', sans-serif;
 	border: none;
 	cursor: pointer;
 	outline: none;
@@ -97,8 +95,6 @@ form {
 			transition: 300ms all;
 		}
 	}
-
-
 }
 
 @media (max-width: 680px) {
@@ -108,7 +104,6 @@ form {
 		font-size: 15px;
 		padding: 10px 10px;
 		border-radius: 4px;
-
 	}
 
 	.tarea-input:focus+label::before {
